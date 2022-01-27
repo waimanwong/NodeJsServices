@@ -1,0 +1,20 @@
+{
+  "name": "foodapi",
+  "version": "1.0.0",
+  "description": "Implements this tutorial\r https://coderrocketfuel.com/article/bootstrap-a-rest-api-with-node-js-express-mongodb",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "start": "NODE_ENV=production node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15"
+  }
+}
