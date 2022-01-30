@@ -3,9 +3,13 @@ const helmet = require("helmet")
 const cors = require("cors")
 const bodyParser = require("body-parser")
 
+const dotenv = require("dotenv")
+dotenv.config()
+
 
 const mongoose = require("mongoose")
-const mongoString = "mongodb+srv://mongouser:mongouser@my-cluster.4uq9d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const mongoString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@my-cluster.4uq9d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+console.log(mongoString)
 mongoose.connect(mongoString)
 mongoose.connection.on("error", function(error) {
     if(process.env.NODE_ENV === "development") {
